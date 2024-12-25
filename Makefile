@@ -1,4 +1,4 @@
-.PHONY: clean all
+.PHONY: clean all run list
 
 all: t check.dylib
 
@@ -8,8 +8,11 @@ clean:
 run: t check.dylib
 	./t
 
+list:
+	ls -lrt
+
 t: t.c
 	gcc -o t t.c
 
 check.dylib: check.v
-	v -shared -no-builtin -gc none check.v
+	v -freestanding -shared -no-builtin -gc none check.v
