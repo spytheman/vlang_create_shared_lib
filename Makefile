@@ -5,6 +5,9 @@ all: t check.dylib
 clean:
 	rm -rf t check.dylib
 
+run: t check.dylib
+	./t
+
 t: t.c
 	gcc -o t t.c
 
