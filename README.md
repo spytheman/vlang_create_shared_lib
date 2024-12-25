@@ -8,7 +8,7 @@ make clean all run list
 ```
 rm -rf t check.dylib
 v -prod -freestanding -shared -no-builtin -gc none check.v
-gcc -o t t.c
+cc -o t t.c
 ./t
 INFO: /Users/delyanangelov/code/misc/2024_12_25__09/check.dylib OK
      a: 123
