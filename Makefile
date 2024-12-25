@@ -13,7 +13,7 @@ list:
 	ls -lrt
 
 t: t.c
-	gcc -o t t.c
+	cc -o t t.c
 
 check.dylib: check.v
 	v -prod -freestanding -shared -no-builtin -gc none check.v
